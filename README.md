@@ -10,6 +10,7 @@ See every branch as a colored commit graph, inspect any commit, and run everyday
 ![Platform](https://img.shields.io/badge/IntelliJ%20Platform-2026.2%2B-orange)
 ![Kotlin](https://img.shields.io/badge/Kotlin-2.4-7F52FF)
 ![Java](https://img.shields.io/badge/Java-25-red)
+![License](https://img.shields.io/badge/license-MIT-green)
 
 ![VT Git Graph showing a commit graph, branch sidebar and commit details](docs/images/preview.png)
 
@@ -240,4 +241,4 @@ Update `pluginVersion` in `gradle.properties` and the change notes in `plugin.xm
 
 ## License
 
-No license has been chosen for this project yet. Until one is added, all rights are reserved by the author.
+Released under the [MIT License](LICENSE).
