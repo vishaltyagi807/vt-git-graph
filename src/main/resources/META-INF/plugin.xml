@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.vt.gitgraph</id>
+    <name>VT Git Graph</name>
+    <vendor>VT</vendor>
+    <description><![CDATA[
+    A complete, visual Git graph for IntelliJ IDEA. Browse every branch as a colored commit graph, inspect
+    commits and changed files, and run Git operations directly from the graph: checkout, branch, tag, merge,
+    rebase, interactive rebase, cherry-pick, revert, reset, stash, bisect, worktrees, remotes and submodules.
+    ]]></description>
+    <change-notes><![CDATA[
+    <ul>
+        <li>Initial release of the commit graph, details panel and Git operations.</li>
+    </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.vcs</depends>
+    <depends>Git4Idea</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="VT Git Graph"
+                    anchor="bottom"
+                    icon="/icons/toolwindow.svg"
+                    factoryClass="com.vt.gitgraph.ui.GitGraphToolWindowFactory"/>
+        <fileEditorProvider implementation="com.vt.gitgraph.ui.GitGraphEditorProvider"/>
+        <notificationGroup id="VT Git Graph" displayType="BALLOON"/>
+    </extensions>
+
+    <actions>
+        <action id="VtGitGraph.OpenInEditor"
+                class="com.vt.gitgraph.ui.OpenGraphInEditorAction"
+                text="Open VT Git Graph in Editor Tab"
+                description="Open the Git graph as a full editor tab"
+                icon="/icons/toolwindow.svg">
+            <add-to-group group-id="Git.MainMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
